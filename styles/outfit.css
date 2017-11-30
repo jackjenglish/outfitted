@@ -1,0 +1,154 @@
+/* OUTFIT 3 - STYLES*/
+
+@media only screen and (min-width: 600px) {
+	.outfit-root{
+		margin: 12px auto 0 auto; 
+		background-color: #eee;
+	}
+	.outfit-body-container{
+		display: flex;
+		flex-wrap: nowrap;
+	}
+	.outfit-content-main{
+		background-color: #fff;
+		padding: 0em 0.5em 0em 0.5em;
+		text-align: left;
+		border-radius: 0.5em;
+	}
+
+	.outfit-content-sidebar{
+		margin-left: 0.5em;
+		border-radius: 0.5em; 
+		max-width: 300px;
+		max-height: 600px;
+	}
+
+	/*Content-Main
+	------------------*/
+	.outfit-slider-container{
+		padding: 0.25em 0;
+		border-top: 1px solid #eee;
+	}
+	.outfit-slider-container:first-child{
+		padding: 0.25em 0;
+		border-top: none;
+	}
+
+
+	/*Subtotal Box*/
+	.subtotal-summary{
+		padding: 1em 0em;
+		display: flex;
+		border-top: 1px solid #eee
+	}
+	.subtotal-summary-price-container{
+		padding: 0 0.5em;
+		flex-grow: 1;
+		height: 40px;
+		font-weight:600;
+		line-height: 40px;
+		font-size: 1.2em;
+	}
+	.subtotal-summary-price{
+		color: #D01345;
+		font-size: 1em;
+	}
+	.addToCartButton-summary{
+		height: 40px;
+		font-weight:600;
+		line-height: 40px;
+		padding: 0 0.5em;
+		background-color: #00AA5B;
+		color: #fff;
+		border-radius: 0.25em;
+		cursor: pointer;
+	}
+
+	/*--------------------*/
+
+	/*Content-Sidebar*/
+	.sidebar-scroll{
+		position: relative;
+		transition: top 0.2s ease;
+	}
+	.outfit-image{
+		max-height: 500px;
+		max-width: 300px;
+		display: inline-block;
+		border-radius: 0.5em; 	
+	}
+	/*#464646      #d3d3d3*/
+}
+
+@media only screen and (max-width: 600px) {
+	.outfit-root{
+
+		background-color: #eee;
+	}
+	.outfit-body-container{
+		display: flex;
+		flex-direction: column;
+	}
+	.outfit-content-main{
+		order:2;
+		background-color: #fff;
+		padding: 0em 0.5em;
+		text-align: left;
+	}
+	.outfit-content-sidebar{
+		order:1;
+		border-radius: 0.5em; 
+	}
+	/*Content-Main
+	------------------*/
+	.outfit-slider-container{
+		padding: 0.25em 0;
+		border-top: 1px solid #eee;
+	}
+	.outfit-slider-container:first-child{
+		padding: 0.25em 0;
+		border-top: none;
+	}
+
+	.subtotal-summary{
+		padding: 1em 0em;
+		display: flex;
+		border-top: 1px solid #eee;
+	}
+	.subtotal-summary-price-container{
+		padding: 0 0.5em;
+		flex-grow: 1;
+		font-weight:600;
+		height: 40px;
+		line-height: 40px;
+		font-size: 1.2em;
+	}
+	.subtotal-summary-price{
+		color: #D01345;
+		font-size: 1em;
+	}
+	.addToCartButton-summary{
+		font-weight:400;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 0.5em;
+		background-color: #00AA5B;
+		color: #fff;
+		border-radius: 0.25em;
+		cursor: pointer;
+	}
+
+	/*--------------------*/
+
+	/*Content-Sidebar*/
+	.sidebar-scroll{
+		background-color: #fff;
+	}
+	.outfit-image{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 1em;
+		height: auto;
+		display: inline-block;
+	}
+}

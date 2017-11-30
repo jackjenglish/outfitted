@@ -1,0 +1,122 @@
+.grid-root{
+	max-width: 1040px;
+	position: relative;
+}
+.grid-item-container{
+	display: inline-block;
+	position: relative;
+}
+.grid-item{
+	display: inline-block;
+	top:0;
+	left:0;
+	padding: 0.75em;
+	position: absolute;
+	box-sizing: border-box;
+	cursor: pointer;
+	border-radius: 0.5em;
+	transition: background-color 0.1s ease-in-out;
+}
+@media only screen and (max-width: 600px) {
+	.grid-header{
+		display: none;
+		font-weight: 600;
+		padding: 0.25em 0.75em 0em 0.75em;
+	}
+	.grid-header-title{
+		display: none;
+		color: #464646;
+		font-size: 24px;
+	}
+	.grid-header-subtext{
+		font-size: 18px;
+		color: #d3d3d3;
+	}
+	.grid-item{
+		padding: 0.5em;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.grid-root{
+		flex-grow: 1;
+		position: relative;
+	}
+	.grid-header{
+		padding: 1em 1em 0em 1em;
+		color: #464646;
+		display: block;
+	}
+	.grid-header-title{
+		font-size: 32px;
+		font-weight: 600;
+	}
+	.grid-header-subtext{
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 600;
+		color: #d3d3d3;
+	}
+}
+
+.grid-item:hover{
+	background-color: #fff;
+}
+.grid-item-image{
+	height: auto;
+	width: 100%;
+	display: block;
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+.grid-item-gradient{
+	position: absolute;
+	border-radius: 0.5em;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, transparent 75%, rgba(0,0,0,0.5) 100%);
+	transition: transform 0.2s ease-in-out;
+}
+.grid-item-save{
+	position: absolute;
+	border-radius: 0.5em;
+	top:10px;
+	right: 10px;
+	background-color: #fff;
+	padding: 4px 8px;
+	color: #464646;
+	opacity: 0;
+	font-weight: bold;
+	font-size: 20px;
+	transition: opacity 0.1s ease-in-out;
+}
+.grid-item-save:hover{
+	transform: scale(1.1);
+	transition: transform 0.1s ease-in-out;
+}
+.grid-item:hover .grid-item-price-min,.grid-item:hover .grid-item-price-max,.grid-item:hover .grid-item-save{
+	opacity: 1;
+}
+.grid-item-price{
+	font-size: 20px;
+	position: absolute;
+	width: 100%;
+	bottom: 8px;
+	text-align: center;
+	color: #fff;
+	display: flex;
+}
+.grid-item-price-min,.grid-item-price-max{
+	flex-grow: 1;
+	font-size: 12px;
+	opacity: 0;
+	transition: opacity 0.1s ease-in-out;
+}
+.grid-item-price-actual{
+	flex-grow: 1;
+}
+
+.grid-item-price-label{
+	color:#d3d3d3;
+}
